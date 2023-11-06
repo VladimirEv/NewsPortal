@@ -4,11 +4,11 @@ using NewsPortal.Domain.Entities;
 
 namespace NewsPortal.Persistance.Configuration
 {
-    public class RoleEntityConfiguration : IEntityTypeConfiguration<Role>
+    public class UserEntityConfiguration : IEntityTypeConfiguration<User>
     {       
-        public void Configure(EntityTypeBuilder<Role> builder)
+        public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.ToTable("Roles");
+            builder.ToTable("Users");
         }
     }
 }
