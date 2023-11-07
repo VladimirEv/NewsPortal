@@ -1,9 +1,4 @@
-﻿using NewsPortal.BusinessLogic.Models;
-using NewsPortal.BusinessLogic.Models.RequestModels;
-using NewsPortal.Domain.Entities;
-using NewsPortal.Infrastucture.Common.Response.ResponseModels.Base;
-
-namespace NewsPortal.BusinessLogic.Interfaces
+﻿namespace NewsPortal.BusinessLogic.Interfaces
 {
     public interface IUserService
     {

@@ -1,5 +1,4 @@
-﻿using System.Net;
-
+﻿
 namespace NewsPortal.Infrastucture.Common.Response.ResponseModels.Base
 {
     public class BaseResponse

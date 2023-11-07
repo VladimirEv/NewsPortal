@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using NewsPortal.Infrastucture.Common.Response.ResponseModels.Base;
-using System.Net;
-
-namespace NewsPortal.Web.Controllers.Base
+﻿namespace NewsPortal.Web.Controllers.Base
 {
     public class BaseController : ControllerBase
     {
