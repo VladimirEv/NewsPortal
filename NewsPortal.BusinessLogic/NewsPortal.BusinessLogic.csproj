@@ -11,4 +11,8 @@
     <ProjectReference Include="..\NewsPortal.Persistance\NewsPortal.Persistance.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
