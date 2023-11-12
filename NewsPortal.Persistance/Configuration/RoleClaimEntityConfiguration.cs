@@ -14,7 +14,7 @@ namespace NewsPortal.Persistance.Configuration
         /// <summary> Работа метода Configure.
         ///Внутри этого метода выполняются настройки сущности RoleClaim.
         ///устанавливается имя таблицы, в которой будут храниться данные сущности RoleClaim
-        ///Строка builder.ToTable("RoleClaims") указывает, что сущность RoleClaimEntity будет
+        ///Строка builder.ToTable("RoleClaims") указывает, что сущность RoleClaim будет
         ///отображаться в таблице с именем "RoleClaims" в базе данных
         /// </summary>
         

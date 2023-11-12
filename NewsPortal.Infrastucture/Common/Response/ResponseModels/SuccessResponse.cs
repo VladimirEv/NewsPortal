@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NewsPortal.Infrastucture.Common.Response.ResponseModels
+﻿namespace NewsPortal.Infrastucture.Common.Response.ResponseModels
 {
     public class SuccessResponse : BaseResponse
     {

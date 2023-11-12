@@ -37,7 +37,7 @@ namespace NewsPortal.BusinessLogic.Services
                 return _responseFactory.BadResponse(defaultRole, UserServiceConstants.FailedWhenGetDefaultRole);
             }
 
-            var createResult = await _userManager.CreateAsync(user, registerModel.Password);
+            var createResult = await _userManager?.CreateAsync(user, registerModel.Password);
             if (!createResult.Succeeded)
             {
                 return _responseFactory.BadResponse(createResult, UserServiceConstants.FailedWhenCreateUser);
@@ -49,7 +49,7 @@ namespace NewsPortal.BusinessLogic.Services
                 return _responseFactory.BadResponse(addRoleResult, UserServiceConstants.FailedWhenAddRoleToUser);
             }
 
-            var userModel = _mapper.Map<UserModel>(user);
+            var userModel = _mapper?.Map<UserModel>(user);
 
             return _responseFactory.SuccessResponse(userModel);
         }
@@ -64,13 +64,13 @@ namespace NewsPortal.BusinessLogic.Services
 
             user.UserName = model.UserName;
             user.UpdatedDate = DateTime.UtcNow;
-            var result = await _userManager.UpdateAsync(user);
+            var result = await _userManager?.UpdateAsync(user);
             if (!result.Succeeded)
             {
                 return _responseFactory.BadResponse(result, UserServiceConstants.FailedWhenUpdateUser);
             }
 
-            var userModel = _mapper.Map<UserModel>(user);
+            var userModel = _mapper?.Map<UserModel>(user);
 
             return _responseFactory.SuccessResponse(userModel);
         }
@@ -84,7 +84,7 @@ namespace NewsPortal.BusinessLogic.Services
             }
 
             user.UpdatedDate = DateTime.UtcNow;
-            var result = await _userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
+            var result = await _userManager?.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
             if (!result.Succeeded)
             {
                 return _responseFactory.BadResponse(result, UserServiceConstants.FailedWhenChangePassword);
@@ -101,7 +101,7 @@ namespace NewsPortal.BusinessLogic.Services
                 return _responseFactory.NotFoundResponse(user, nameof(userId), userId.ToString());
             }
 
-            var result = await _userManager.ChangeEmailAsync(user, newEmail, token);
+            var result = await _userManager?.ChangeEmailAsync(user, newEmail, token);
             if (!result.Succeeded)
             {
                 return _responseFactory.BadResponse(result, UserServiceConstants.FailedWhenChangeEmail);
@@ -136,7 +136,7 @@ namespace NewsPortal.BusinessLogic.Services
             }
 
             user.UpdatedDate = DateTime.UtcNow;
-            var result = await _userManager.SetLockoutEndDateAsync(user, DateTime.UtcNow.AddHours(hours));
+            var result = await _userManager?.SetLockoutEndDateAsync(user, DateTime.UtcNow.AddHours(hours));
             if (!result.Succeeded)
             {
                 return _responseFactory.BadResponse(result, UserServiceConstants.FailedWhenSetLockoutEndDate);
@@ -147,8 +147,8 @@ namespace NewsPortal.BusinessLogic.Services
 
         public async Task<BaseResponse> GetAll()
         {
-            var users = await _userManager.Users.ToListAsync();
-            var userModels = _mapper.Map<IReadOnlyCollection<User>, IReadOnlyCollection<UserModel>>(users);
+            var users = await _userManager?.Users.ToListAsync();
+            var userModels = _mapper?.Map<IReadOnlyCollection<User>, IReadOnlyCollection<UserModel>>(users);
 
             return _responseFactory.SuccessResponse(userModels);
         }
@@ -161,32 +161,32 @@ namespace NewsPortal.BusinessLogic.Services
                 return _responseFactory.NotFoundResponse(user, nameof(userId), userId.ToString());
             }
 
-            var userModel = _mapper.Map<UserModel>(user);
+            var userModel = _mapper?.Map<UserModel>(user);
 
             return _responseFactory.SuccessResponse(userModel);
         }
 
         public async Task<BaseResponse> GetByEmail(string email)
         {
-            var user = await _userManager.FindByEmailAsync(email);
+            var user = await _userManager?.FindByEmailAsync(email);
             if (user == null)
             {
                 return _responseFactory.NotFoundResponse(user, nameof(email), email);
             }
 
-            var userModel = _mapper.Map<UserModel>(user);
+            var userModel = _mapper?.Map<UserModel>(user);
 
             return _responseFactory.SuccessResponse(userModel);
         }
 
         public async Task<User?> GetUserById(Guid userId)
         {
-            return await _userManager.FindByIdAsync(userId.ToString());
+            return await _userManager?.FindByIdAsync(userId.ToString());
         }
 
         public async Task<User?> GetUserByEmail(string email)
         {
-            return await _userManager.FindByEmailAsync(email);
+            return await _userManager?.FindByEmailAsync(email);
         }
     }
 }
