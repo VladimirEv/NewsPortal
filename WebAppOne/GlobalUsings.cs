@@ -2,9 +2,9 @@
 
 global using System.Net;
 global using System.Reflection;
-//global using NewsPortal.Web.Constants;
+//global using NewsPortal.API.Constants;
 global using NewsPortal.Web.Controllers.Base;
-//global using NewsPortal.Web.Middlewares;
+//global using NewsPortal.API.Middlewares;
 global using NewsPortal.Policies;
 //global using NewsPortal.Claims.Common.Injector;
 global using NewsPortal.Domain.Entities;

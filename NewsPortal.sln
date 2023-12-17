@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPortal.Web", "WebAppOne\NewsPortal.Web.csproj", "{0E3E8F30-FE8F-4644-BC6C-1A106B02C396}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPortal.API", "WebAppOne\NewsPortal.API.csproj", "{0E3E8F30-FE8F-4644-BC6C-1A106B02C396}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPortal.BusinessLogic", "NewsPortal.BusinessLogic\NewsPortal.BusinessLogic.csproj", "{3D70FC9E-95C7-4A5E-8674-1B5248C906F6}"
 EndProject
@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPortal.Domain", "NewsPo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPortal.Infrastucture", "NewsPortal.Infrastucture\NewsPortal.Infrastucture.csproj", "{09B81800-2BAF-4DBB-8021-A605F4BE20E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsPortal.Policies", "NewsPortal.Policies\NewsPortal.Policies.csproj", "{28EE35DC-85E8-49AA-A964-2657EADE4CEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPortal.Policies", "NewsPortal.Policies\NewsPortal.Policies.csproj", "{28EE35DC-85E8-49AA-A964-2657EADE4CEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
