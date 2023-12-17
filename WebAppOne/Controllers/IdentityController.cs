@@ -4,7 +4,7 @@
     [ApiController]
     public class IdentityController : BaseController
     {
-        public readonly IConfiguration _configuration;
+        public readonly IConfiguration? _configuration;
         
     }
 }

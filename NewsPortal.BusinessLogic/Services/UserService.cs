@@ -37,7 +37,7 @@ namespace NewsPortal.BusinessLogic.Services
                 return _responseFactory.BadResponse(defaultRole, UserServiceConstants.FailedWhenGetDefaultRole);
             }
 
-            var createResult = await _userManager?.CreateAsync(user, registerModel.Password);
+            var createResult = await _userManager.CreateAsync(user, registerModel.Password);
             if (!createResult.Succeeded)
             {
                 return _responseFactory.BadResponse(createResult, UserServiceConstants.FailedWhenCreateUser);

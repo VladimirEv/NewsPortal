@@ -1,6 +1,12 @@
+using NewsPortal.BusinessLogic.Common.Injector;
 using NewsPortal.Persistance;
 
+
 var builder = WebApplication.CreateBuilder(args);
+
+var host = builder.Host;
+var services = builder.Services;
+var configuration = builder.Configuration;
 
 // Add services to the container.
 
@@ -17,6 +23,9 @@ opt.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+LogicInjector.Register(services);
+
+// Application level
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
