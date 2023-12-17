@@ -5,6 +5,7 @@
         public static void Register (IServiceCollection services)
         {
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IIdentityService, IdentityService>();
         }
     }
 }

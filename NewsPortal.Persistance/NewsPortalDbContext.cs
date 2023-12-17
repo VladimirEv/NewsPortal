@@ -16,10 +16,8 @@ namespace NewsPortal.Persistance
         {
             base.OnModelCreating(builder);
         }
-
     }
 
-    //разобраться!!!
     public class NewsPortalDbContextFactory : IDesignTimeDbContextFactory<NewsPortalDbContext>
     {
         public NewsPortalDbContext CreateDbContext(string[] args)
