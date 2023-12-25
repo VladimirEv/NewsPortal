@@ -46,7 +46,6 @@
             var role = await _roleService.GetRoleWithMaxWeightByUser(user.Id);
             var accessToken = await _jwtService.CreateToken(user, role.Name);
             var refreshToken = Guid.NewGuid().ToString();
-
             var tokensModel = new TokensModel
             {
                 AccessToken = accessToken,
@@ -54,7 +53,6 @@
             };
 
             await _jwtService.UpdateRefreshTokenByUser(user.Id, refreshToken);
-
             return _responseFactory.SuccessResponse(tokensModel);
         }
 

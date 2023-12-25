@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NewsPortal.Policies.Requirements.Handlers
+﻿namespace NewsPortal.Policies.Requirements.Handlers
 {
-    internal class AdminRequirementHandler
+    public class AdminRequirementHandler : AuthorizationHandler<AdminRequirement>
     {
+        protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, AdminRequirement requirement)
+        {
+            var roleNameClaim = context.User.FindFirst(c => c.Type == AuthorizationClaims.Role)?.Value;
+            if (roleNameClaim == Constants.Admin)
+            {
+                context.Succeed(requirement);
+            }
+
+            return Task.CompletedTask;
+        }
     }
 }

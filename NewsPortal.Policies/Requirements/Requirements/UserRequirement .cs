@@ -1,4 +1,5 @@
-﻿namespace NewsPortal.Policies.Requirements.Requirements
+﻿
+namespace NewsPortal.Policies.Requirements.Requirements
 {
     public class UserRequirement : IAuthorizationRequirement
     {

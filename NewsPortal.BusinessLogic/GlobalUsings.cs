@@ -16,7 +16,7 @@ global using NewsPortal.BusinessLogic.Models.RequestModels;
 global using NewsPortal.BusinessLogic.Services;
 global using NewsPortal.Persistance;
 global using AutoMapper;
-//global using FluentValidation;
+global using FluentValidation;
 global using Microsoft.AspNetCore.Identity;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.Extensions.Caching.Distributed;

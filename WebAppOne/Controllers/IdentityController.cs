@@ -1,6 +1,4 @@
-﻿using NewsPortal.Infrastucture.Constants;
-
-namespace NewsPortal.API.Controllers
+﻿namespace NewsPortal.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

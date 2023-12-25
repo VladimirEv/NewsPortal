@@ -5,11 +5,16 @@ using NewsPortal.Domain.Entities;
 
 namespace NewsPortal.Persistance
 {
-    public class NewsPortalDbContext : IdentityDbContext<User, Role, int, UserClaim, UserRole, UserLogin, RoleClaim, UserToken>
+    public class NewsPortalDbContext : IdentityDbContext<User, Role, Guid, UserClaim, UserRole, UserLogin, RoleClaim, UserToken>
     {
         public NewsPortalDbContext(DbContextOptions options) : base(options)
         {
-            Database.EnsureCreated(); //cоздаём БД, если БД нет
+            Database.Migrate(); //cоздаём БД, если БД нет
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.LogTo(Console.WriteLine);
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

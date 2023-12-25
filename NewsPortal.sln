@@ -14,6 +14,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPortal.Infrastucture", "NewsPortal.Infrastucture\NewsPortal.Infrastucture.csproj", "{09B81800-2BAF-4DBB-8021-A605F4BE20E3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPortal.Policies", "NewsPortal.Policies\NewsPortal.Policies.csproj", "{28EE35DC-85E8-49AA-A964-2657EADE4CEA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{09B81800-2BAF-4DBB-8021-A605F4BE20E3} = {09B81800-2BAF-4DBB-8021-A605F4BE20E3}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
