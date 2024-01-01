@@ -54,7 +54,6 @@ services.AddAutoMapper(Assembly.GetAssembly(typeof(MapperConfiguration)));
 PoliciesInjector.Register(services, configuration);
 InfrastructureInjector.Register(services, configuration);
 LogicInjector.Register(services);
-;
 
 // Application level
 var app = builder.Build();

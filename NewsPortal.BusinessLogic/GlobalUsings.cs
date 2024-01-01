@@ -3,7 +3,7 @@
 global using System.IdentityModel.Tokens.Jwt;
 global using System.Security.Claims;
 global using System.Text;
-//global using NewsPortal.Claims;
+global using NewsPortal.Policies;
 global using NewsPortal.Domain.Entities;
 global using NewsPortal.Infrastucture.Common.Response.Interfaces;
 global using NewsPortal.Infrastucture.Common.Response.ResponseModels.Base;
