@@ -147,7 +147,7 @@ namespace NewsPortal.BusinessLogic.Services
 
         public async Task<BaseResponse> GetAll()
         {
-            var users = await _userManager?.Users.ToListAsync();
+            var users = await _userManager.Users.ToListAsync();
             var userModels = _mapper?.Map<IReadOnlyCollection<User>, IReadOnlyCollection<UserModel>>(users);
 
             return _responseFactory.SuccessResponse(userModels);
