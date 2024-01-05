@@ -2,8 +2,9 @@
 
 namespace NewsPortal.Domain.Entities
 {
-    public class UserClaim : IdentityUserClaim<int>
+    public class UserClaim : IdentityUserClaim<Guid>, ITimeStamp
     {
-
+        public DateTime CreatedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
     }
 }

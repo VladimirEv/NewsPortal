@@ -2,8 +2,9 @@
 
 namespace NewsPortal.Domain.Entities
 {
-    public class UserLogin : IdentityUserLogin<int>
+    public class UserLogin : IdentityUserLogin<Guid>, ITimeStamp
     {
-
+        public DateTime CreatedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
     }
 }
